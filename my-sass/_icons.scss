@@ -1,0 +1,73 @@
+.icon  {
+	position: relative;
+	display: inline-block;
+}
+
+.icon::before,
+.icon::after {
+	content: "";
+	position: absolute;
+}
+
+$sizes: (
+	1:xs,
+	2:sm,
+	3:m, 
+	4:lg, 
+	5:xl 
+); 
+$baseWidth: 16px;
+$baseHeight: 3px;
+$baseBottom: -6px;
+$baseTop: -6px;
+
+.top {
+	margin-top: 35px;
+}
+
+@for $i from 1 through 5{
+	.icon_hamburger_#{map-get($sizes,$i)} {
+		width: $i*$baseWidth;
+		height: $i*$baseHeight;
+		background-color: black;
+	}
+
+	.icon_hamburger_#{map-get($sizes,$i)}::before {
+		top: $i*$baseTop;
+		width: $i*$baseWidth;
+		height: $i*$baseHeight;
+		background-color: black;
+	}
+
+	.icon_hamburger_#{map-get($sizes,$i)}::after {
+		bottom: $i*$baseBottom;
+		width: $i*$baseWidth;
+		height: $i*$baseHeight;
+		background-color: black;
+	}
+
+}
+
+@for $i from 1 through 5{
+	.icon_home_#{map-get($sizes,$i)} {
+		border-bottom: $baseWidth solid black;
+		border-left: $baseWidth solid transparent;
+		border-right: $baseWidth solid transparent;
+	}
+	
+	.icon_home_#{map-get($sizes,$i)}::before {
+		width: $i*$baseWidth;
+		height: $i*$baseHeight;
+		background-color: black;
+	}
+
+	.icon_home_#{map-get($sizes,$i)}::before {
+		margin: $i*$baseWidth 0 0 $i*(-($baseHeight));
+	}
+
+	.icon_home_#{map-get($sizes,$i)}::after {
+		margin: $i*$baseWidth 0 0 $i*$baseHeight;
+	}
+
+}
+

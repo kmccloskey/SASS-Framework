@@ -1,0 +1,26 @@
+$sizes: (
+  1:xs,
+  2:sm,
+  3:m, 
+  4:lg, 
+  5:xl 
+); 
+$baseBtnW: 80px;
+$baseBtnH: 20px;
+
+@for $i from 1 through 5{
+  .btn_#{map-get($sizes,$i)} {
+    width: $i*$baseBtnW;
+    height: $i*$baseBtnH;
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+    font-family: Courier New;
+    color: #ffffff;
+    font-size: 12px;
+    background: #d93434;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+
+}

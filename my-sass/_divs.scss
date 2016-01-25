@@ -1,0 +1,104 @@
+.grid-container {
+	width: 100%;
+	max-width: 1440px;
+}
+
+.row:before,
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+[class*='col-']{
+	float: left;
+	min-height: 1px;
+	width: 16.66%;
+	padding: 10px;
+}
+
+.grid-container *{
+	box-sizing: border-box;
+}
+
+.col-1 {
+	width: 16.66%;
+}
+
+.col-2 {
+	width: 33.33%;
+}
+
+.col-3 {
+	width: 50%;
+}
+
+.col-4 {
+	width: 66.664%;
+}
+
+.col-5 {
+	width: 83.33%;
+}
+
+.col-6 {
+	width: 100%;
+}
+
+.offset {
+	margin-left: 16.66%;
+}
+
+nav li {
+	display: inline-block;
+	margin-left: 77px;
+	margin-top: 25px;
+}
+
+.center {
+	text-align: center;
+}
+
+nav a {
+	text-decoration: none;
+	color: #A29D97;
+	font-size: 35px;
+	font-family: arial;
+}
+
+.why {
+	font-family: arial;
+	color: #A29D97;
+}
+
+.anvil_text {
+	font-family: arial;
+	color: #A29D97;
+}
+
+@media all and (max-width: 640px) and (min-width: 300px){
+
+.anvil {
+	display: none;
+}
+
+.col-1 {
+	width: 100%;
+}
+
+.mq {
+	padding: 0;
+}
+
+.col-2 {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.logo {
+	padding: 0;
+}
+
+}
+
+

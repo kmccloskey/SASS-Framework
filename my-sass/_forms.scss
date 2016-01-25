@@ -1,0 +1,19 @@
+$sizes: (
+	1:xs,
+	2:sm,
+	3:m, 
+	4:lg, 
+	5:xl 
+); 
+$baseFormWidth: 100px;
+$baseFormHeight: 40px;
+
+@for $i from 1 through 5{
+	.form_#{map-get($sizes,$i)} {
+		width: $i*$baseFormWidth;
+		height: $i*$baseFormHeight;
+		background-color: white;
+		border-radius: 5px;
+		text-align: left;
+	}
+}
